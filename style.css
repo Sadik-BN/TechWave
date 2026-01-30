@@ -245,8 +245,71 @@ nav ul li {
 }
 
 
+/* Why Section styles */
+.why {
+    background-color: #230E3D;
+    color: white;
+    padding: 120px 200px;
+}
 
+.why h1 {
+    margin: 0;
+    text-align: center;
+}
 
+#whycard1 {
+    grid-area: whycard1;
+}
+
+#whycard2 {
+    grid-area: whycard2;
+}
+
+#whycard2 img {
+    width: 45px;
+}
+
+#whycard3 {
+    grid-area: whycard3;
+}
+
+#whycard4 {
+    grid-area: whycard4;
+}
+
+#whycard5 {
+    grid-area: whycard5;
+}
+
+.why-cards {
+    margin-top: 40px;
+    display: grid;
+    grid-template-areas:
+        "whycard1 whycard2 whycard2"
+        "whycard1 whycard3 whycard3"
+        "whycard4 whycard4 whycard5"
+    ;
+    gap: 30px;
+}
+
+.why-cards img {
+    height: 60px;
+    width: 60px;
+}
+
+.why-cards h3 {
+    color: white;
+}
+
+.why-cards p {
+    color: rgba(255, 255, 255, 0.555);
+}
+
+.whycard {
+    padding: 40px;
+    border-radius: 40px;
+    background-color: #351165;
+}
 
 /* Responsive Styles */
 @media screen and (max-width: 576px) {
@@ -323,5 +386,17 @@ nav ul li {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 40px;
+    }
+
+    /* Why section design */
+    .why {
+        padding: 40px;
+    }
+
+    .why-cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
