@@ -1,0 +1,263 @@
+@keyframes btn-animation {
+    0% {
+        background-image: linear-gradient(30deg, #F7E93F, #FB09B4, #9100F8);
+    }
+
+    25% {
+        background-image: linear-gradient(30deg, #F7E93F, #FB09B4, #9100F8);
+    }
+
+    50% {
+        background-image: linear-gradient(30deg, #FB09B4, #9100F8, #F7E93F);
+    }
+
+    75% {
+        background-image: linear-gradient(30deg, #9100F8, #F7E93F, #FB09B4);
+    }
+
+    100% {
+        background-image: linear-gradient(30deg, #F7E93F, #FB09B4, #9100F8);
+    }
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+nav {
+    height: 92px;
+    background-color: #412567;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav h1 {
+    margin: 0;
+}
+
+#white {
+    color: white;
+}
+
+.grad-text {
+    background-image: linear-gradient(to top, #F7E93F, #FB09B4, #9100F8);
+    background-clip: text;
+    color: transparent;
+}
+
+.hamburger {
+    display: none;
+}
+
+nav ul {
+    display: flex;
+    gap: 32px;
+}
+
+nav ul li {
+    list-style: none;
+    color: white;
+}
+
+.anim-gradient-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    width: 155px;
+    height: 50px;
+    border: none;
+    border-radius: 10000px;
+    animation: btn-animation 2s linear infinite normal;
+
+}
+
+.anim-gradient-button:hover {
+    cursor: pointer;
+    background-image: linear-gradient(30deg, #F7E93F, #FB09B4, #9100F8);
+    animation: none;
+
+}
+
+.btn-text {
+    color: white;
+    font-weight: 600;
+}
+
+.btn-image {
+    height: 20px;
+    width: 20px;
+
+}
+
+.hero {
+    background-image: url("./assets/hero-bg.png");
+    height: 760px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-logo {
+    width: 350px;
+    margin: 0 auto;
+}
+
+#hero-circle {
+    position: absolute;
+    margin-top: 100px;
+    z-index: 0;
+}
+
+#microphone {
+    position: absolute;
+    margin-top: 180px;
+    margin-left: 120px;
+    z-index: 1;
+    transition: transform 5s ;
+    
+
+}
+
+#microphone:hover {
+    transform: rotate(360deg);
+}
+
+#badge {
+    width: 120px;
+    position: absolute;
+    z-index: 2;
+    margin-top: 100px;
+    margin-left: 245px;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 490px;
+}
+
+.hero-content h1 {
+    color: white;
+    font-size: 60px;
+    font-weight: 800;
+    margin: 0;
+}
+
+.hero-content p {
+    color: white;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 8px;
+}
+
+.gradient-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    width: 200px;
+    height: 45px;
+    border: none;
+    border-radius: 10000px;
+    background-image: linear-gradient(30deg, #F7E93F, #FB09B4, #9100F8);
+    opacity: 0.7;
+
+}
+
+.gradient-button:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.green-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    width: 150px;
+    height: 45px;
+    border: none;
+    border-radius: 10000px;
+    border: 1px solid #00FF88;
+    color: #00FF88;
+    font-weight: 600;
+}
+
+.green-button:hover {
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 576px) {
+    nav {
+        height: 60px;
+        justify-content: space-between;
+        padding: 20px;
+
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .anim-gradient-button {
+        display: none;
+    }
+
+    .hero {
+        height: 466px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    #hero-circle {
+        width: 200px;
+        margin-top: 40px;
+        margin-left: 75px;
+    }
+
+    #microphone {
+        width: 50px;
+        margin-top: 105px;
+        margin-left: 150px;
+    }
+
+    #badge {
+        width: 100px;
+        margin-top: 40px;
+        margin-left: 210px;
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 260px;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .hero-content p {
+        text-align: center;
+    }
+}
