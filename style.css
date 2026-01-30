@@ -40,6 +40,9 @@ body {
     margin: 0 auto;
 }
 
+
+
+/* Navigation section Styles */
 nav {
     height: 92px;
     background-color: #412567;
@@ -107,6 +110,9 @@ nav ul li {
 
 }
 
+
+
+/* Hero Section Styles */
 .hero {
     background-image: url("./assets/hero-bg.png");
     height: 760px;
@@ -206,7 +212,46 @@ nav ul li {
     cursor: pointer;
 }
 
+
+/* About Section styles */
+
+.about {
+    background-color: #1A0B2E;
+    padding: 50px 200px 120px 200px;
+}
+
+.abt-content {
+    color: white;
+    text-align: center;
+    padding-bottom: 80px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.219);
+}
+
+.abt-content h1 {
+    margin: 0;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    flex-wrap: wrap;
+    color: white;
+    margin-top: 80px;
+}
+
+.stats h1 {
+    color: #00FF88;
+}
+
+
+
+
+
+/* Responsive Styles */
 @media screen and (max-width: 576px) {
+
+    /* Navigation styles */
     nav {
         height: 60px;
         justify-content: space-between;
@@ -226,6 +271,8 @@ nav ul li {
         display: none;
     }
 
+
+    /* Hero styles */
     .hero {
         height: 466px;
         background-size: cover;
@@ -265,5 +312,16 @@ nav ul li {
 
     .hero-content p {
         text-align: center;
+    }
+
+    /* About Styles */
+    .about {
+        padding: 40px 20px;
+    }
+
+    .stats {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
     }
 }
